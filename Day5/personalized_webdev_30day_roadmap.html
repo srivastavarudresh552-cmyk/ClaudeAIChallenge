@@ -1,0 +1,196 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.roadmap{padding:1rem 0;font-family:var(--font-sans)}
+.context-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.ctx-tag{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.week-row{margin-bottom:0.25rem}
+.week-header{display:flex;align-items:center;gap:10px;margin:1.75rem 0 0.75rem;cursor:pointer;user-select:none}
+.week-badge{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.week-title{font-size:15px;font-weight:500;color:var(--color-text-primary);flex:1}
+.week-milestone{font-size:12px;color:var(--color-text-secondary);max-width:220px;text-align:right}
+.days-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 10px;cursor:pointer;transition:border-color 0.15s,background 0.15s;min-width:0}
+.day-card:hover{border-color:var(--color-border-secondary)}
+.day-card.active{border-width:1.5px}
+.day-num{font-size:10px;color:var(--color-text-tertiary);margin-bottom:3px}
+.day-task{font-size:12px;color:var(--color-text-primary);line-height:1.35}
+.detail-panel{border-radius:var(--border-radius-lg);border:0.5px solid var(--color-border-tertiary);padding:1.25rem;margin-top:8px}
+.detail-panel h3{font-size:14px;font-weight:500;margin-bottom:1rem}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ds label{font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-tertiary);display:block;margin-bottom:5px}
+.ds p{font-size:13px;color:var(--color-text-secondary);line-height:1.5}
+.res-link{display:inline-flex;align-items:center;gap:4px;font-size:13px;color:#185FA5;text-decoration:none}
+.res-link:hover{text-decoration:underline}
+.time-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;background:var(--color-background-secondary);color:var(--color-text-secondary);padding:3px 8px;border-radius:20px;margin-top:8px}
+.milestone-row{display:flex;align-items:center;gap:8px;margin-top:1rem;padding-top:1rem;border-top:0.5px solid var(--color-border-tertiary)}
+.final-card{margin-top:1.75rem;border-radius:var(--border-radius-lg);padding:1.25rem;display:flex;gap:16px;align-items:flex-start;background:#E6F1FB;border:0.5px solid #B5D4F4}
+.final-icon{font-size:26px;color:#0C447C;margin-top:2px}
+.final-text h3{font-size:14px;font-weight:500;color:#0C447C;margin-bottom:6px}
+.final-text p{font-size:13px;color:#185FA5;line-height:1.5}
+.tags-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.skill-tag{font-size:11px;padding:2px 8px;border-radius:20px;background:var(--color-background-info);color:var(--color-text-info)}
+</style>
+
+<h2 class="sr-only">Personalized 30-day web developer roadmap for a student with React, Node, MongoDB skills</h2>
+
+<div class="roadmap" id="app"></div>
+
+<script>
+const ctx = [
+  {label:"Student",bg:"#E1F5EE",tc:"#085041"},
+  {label:"React · Node · MongoDB",bg:"#EEEDFE",tc:"#26215C"},
+  {label:"4 hrs/day",bg:"#FAEEDA",tc:"#633806"},
+  {label:"Project-based",bg:"#FAECE7",tc:"#4A1B0C"},
+  {label:"Goal: Web Developer",bg:"#E6F1FB",tc:"#042C53"},
+];
+
+const weeks = [
+  {
+    num:1, title:"Fill the gaps + project foundation",
+    milestone:"Ship a fully responsive multi-page site",
+    bg:"#E1F5EE", tc:"#085041", bc:"#9FE1CB", activeBorder:"#1D9E75",
+    detailBg:"#F4FBF8",
+    days:[
+      {task:"Git workflow + GitHub",project:"Push all existing code to GitHub",resource:"Pro Git Book (Ch 1-3)",url:"https://git-scm.com/book/en/v2",time:"4h",tip:"Branches, commits, PRs — this is the workflow every team uses. Non-negotiable."},
+      {task:"CSS advanced: Grid + animations",project:"Animated hero section",resource:"Kevin Powell YouTube",url:"https://www.youtube.com/@KevinPowell",time:"4h",tip:"You likely know basic CSS — now learn layout systems deeply and transitions."},
+      {task:"JavaScript: async/await mastery",project:"Fetch 3 different public APIs",resource:"javascript.info async",url:"https://javascript.info/async-await",time:"4h",tip:"Most React+Node bugs come from misunderstanding async. Master this now."},
+      {task:"TypeScript basics",project:"Rewrite a JS file in TS",resource:"TypeScript in 5 minutes",url:"https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",time:"4h",tip:"Jobs list TS almost everywhere. Learn it early, not after you're deep in a project."},
+      {task:"React: advanced hooks",project:"Custom hook for local storage",resource:"React docs — hooks",url:"https://react.dev/reference/react/hooks",time:"4h",tip:"useCallback, useMemo, custom hooks — the things that separate junior from mid-level."},
+      {task:"React: Context API + state patterns",project:"Theme toggle with Context",resource:"React docs Context",url:"https://react.dev/learn/passing-data-deeply-with-context",time:"4h",tip:"Understand when to use Context vs prop drilling vs external state."},
+      {task:"Week 1 project: Personal portfolio v1",project:"Responsive portfolio deployed on Vercel",resource:"Vercel deploy guide",url:"https://vercel.com/docs/deployments/overview",time:"4h",tip:"Deploy early. A live URL on your resume matters more than code in a drawer."},
+    ]
+  },
+  {
+    num:2, title:"Full-stack MERN — deepen what you know",
+    milestone:"CRUD app live with auth",
+    bg:"#EEEDFE", tc:"#26215C", bc:"#CECBF6", activeBorder:"#7F77DD",
+    detailBg:"#F7F6FE",
+    days:[
+      {task:"Node + Express REST API deep dive",project:"REST API with error handling middleware",resource:"Express best practices",url:"https://expressjs.com/en/advanced/best-practice-performance.html",time:"4h",tip:"Focus on middleware, error handling, and route organization. These are architecture decisions."},
+      {task:"MongoDB: schemas + Mongoose",project:"User + Post schema with relations",resource:"Mongoose docs",url:"https://mongoosejs.com/docs/guide.html",time:"4h",tip:"Learn schema validation and virtuals. Bad schemas cause bugs for months."},
+      {task:"JWT authentication",project:"Register/Login API with JWT",resource:"JWT.io intro",url:"https://jwt.io/introduction",time:"4h",tip:"Understand access tokens vs refresh tokens. Store JWTs in httpOnly cookies, not localStorage."},
+      {task:"React + API integration",project:"Connect React frontend to your auth API",resource:"Axios docs",url:"https://axios-http.com/docs/intro",time:"4h",tip:"Set up an Axios instance with interceptors to attach the JWT to every request automatically."},
+      {task:"Protected routes + auth state",project:"Dashboard only accessible after login",resource:"React Router auth guide",url:"https://reactrouter.com/en/main/start/faq",time:"4h",tip:"Keep auth state in Context. Redirect on protected route if no token."},
+      {task:"File uploads + Cloudinary",project:"Profile picture upload",resource:"Cloudinary Node SDK",url:"https://cloudinary.com/documentation/node_integration",time:"4h",tip:"Never store files in MongoDB. Use a CDN like Cloudinary and store only the URL."},
+      {task:"Week 2 project: Full-stack blog app",project:"Blog with auth, CRUD posts, image upload",resource:"Deploy on Render",url:"https://render.com/docs/deploy-node-express-app",time:"4h",tip:"This is your first portfolio-worthy full-stack project. Polish the UI."},
+    ]
+  },
+  {
+    num:3, title:"Real-world patterns + tooling",
+    milestone:"Production-grade app with tests",
+    bg:"#FAEEDA", tc:"#633806", bc:"#FAC775", activeBorder:"#BA7517",
+    detailBg:"#FDFAF3",
+    days:[
+      {task:"Environment variables + config",project:"Refactor all projects to use .env",resource:"dotenv docs",url:"https://www.npmjs.com/package/dotenv",time:"4h",tip:"Never hardcode secrets. Use .env.local for React (VITE_ prefix) and dotenv for Node."},
+      {task:"Input validation + security basics",project:"Add Joi validation to your API",resource:"Joi docs",url:"https://joi.dev/api/",time:"4h",tip:"Validate all inputs server-side. Rate limiting and helmet.js are 30-minute additions that prevent real attacks."},
+      {task:"React Query for server state",project:"Replace useEffect fetching with React Query",resource:"TanStack Query docs",url:"https://tanstack.com/query/latest/docs/framework/react/overview",time:"4h",tip:"React Query handles loading, error, caching, and refetching. You'll never go back to useEffect for data fetching."},
+      {task:"Testing: Jest + React Testing Library",project:"Write tests for 3 components",resource:"Testing Library docs",url:"https://testing-library.com/docs/react-testing-library/intro/",time:"4h",tip:"Test behavior, not implementation. 'Does the button show a modal' not 'was setState called'."},
+      {task:"Performance: lazy loading + code splitting",project:"Audit and optimize portfolio",resource:"web.dev performance",url:"https://web.dev/explore/performance",time:"4h",tip:"Use React.lazy + Suspense for route-level splitting. Run Lighthouse — score above 90."},
+      {task:"WebSockets intro with Socket.io",project:"Real-time chat prototype",resource:"Socket.io docs",url:"https://socket.io/docs/v4/",time:"4h",tip:"Stateless REST vs stateful WebSockets — knowing when to use each is a senior-level instinct."},
+      {task:"Week 3 project: Real-time todo app",project:"Todos sync live across browser tabs",resource:"Socket.io + React guide",url:"https://socket.io/how-to/use-with-react",time:"4h",tip:"Add optimistic UI updates — update the UI before the server confirms. It feels instant."},
+    ]
+  },
+  {
+    num:4, title:"Capstone + job readiness",
+    milestone:"Hired or freelance-ready",
+    bg:"#FAECE7", tc:"#4A1B0C", bc:"#F5C4B3", activeBorder:"#D85A30",
+    detailBg:"#FEF7F4",
+    days:[
+      {task:"Plan capstone: E-commerce or SaaS",project:"Write full spec + DB schema",resource:"Excalidraw for planning",url:"https://excalidraw.com/",time:"4h",tip:"Spend a full day planning. A clear schema prevents rebuilds. Whiteboard everything."},
+      {task:"Build capstone: Backend + auth",project:"Products API, cart logic, user auth",resource:"Stripe docs",url:"https://stripe.com/docs/api",time:"4h",tip:"Add Stripe for payments. It's on every e-commerce job description and takes ~2 hours to integrate."},
+      {task:"Build capstone: Frontend",project:"Product listing, cart, checkout UI",resource:"Tailwind UI components",url:"https://tailwindcss.com/docs/installation",time:"4h",tip:"Don't reinvent UI. Use headlessui or radix-ui for accessible components."},
+      {task:"Build capstone: Polish + deploy",project:"Live URL, seeded data, README",resource:"Railway for full-stack deploy",url:"https://railway.app/",time:"4h",tip:"Seed realistic fake data with Faker.js. Nobody clicks on an empty demo."},
+      {task:"Resume + GitHub cleanup",project:"README for every project, pinned repos",resource:"GitHub profile guide",url:"https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile",time:"4h",tip:"Your GitHub IS your portfolio. Green squares + good READMEs + pinned projects = interview invites."},
+      {task:"Interview prep: JS fundamentals",project:"Solve 5 problems on LeetCode Easy",resource:"Blind 75 list",url:"https://neetcode.io/practice",time:"4h",tip:"Closures, event loop, prototype chain, this keyword — these come up in every frontend interview."},
+      {task:"Day 30: Mock interview + ship",project:"Do a mock interview. Deploy everything.",resource:"Pramp free mock interviews",url:"https://www.pramp.com/",time:"4h",tip:"You've built 4 deployed projects in 30 days. That's more than most bootcamp grads. Apply confidently."},
+    ]
+  }
+];
+
+let activeWeek = 0;
+let activeDay = 0;
+
+function render() {
+  const app = document.getElementById('app');
+  let html = `<div class="context-bar">`;
+  ctx.forEach(c => {
+    html += `<span class="ctx-tag" style="background:${c.bg};color:${c.tc}">${c.label}</span>`;
+  });
+  html += `</div>`;
+
+  weeks.forEach((week, wi) => {
+    html += `<div class="week-row">
+      <div class="week-header" onclick="toggleWeek(${wi})">
+        <span class="week-badge" style="background:${week.bg};color:${week.tc}">Week ${week.num}</span>
+        <span class="week-title">${week.title}</span>
+        <span class="week-milestone">${week.milestone}</span>
+      </div>
+      <div class="days-grid">`;
+
+    week.days.forEach((day, di) => {
+      const dayNum = wi * 7 + di + 1;
+      const isActive = wi === activeWeek && di === activeDay;
+      const borderStyle = isActive ? `border-color:${week.activeBorder};border-width:1.5px` : '';
+      html += `<div class="day-card${isActive?' active':''}" style="${borderStyle}" onclick="select(${wi},${di})">
+        <div class="day-num">Day ${dayNum}</div>
+        <div class="day-task">${day.task}</div>
+      </div>`;
+    });
+    html += `</div>`;
+
+    if (wi === activeWeek) {
+      const d = week.days[activeDay];
+      const dayNum = wi * 7 + activeDay + 1;
+      html += `<div class="detail-panel" style="background:${week.detailBg}">
+        <h3 style="color:${week.tc}">Day ${dayNum} — ${d.task}</h3>
+        <div class="detail-grid">
+          <div class="ds">
+            <label>Today's build</label>
+            <p>${d.project}</p>
+          </div>
+          <div class="ds">
+            <label>Resource</label>
+            <p><a class="res-link" href="${d.url}" target="_blank"><i class="ti ti-external-link" aria-hidden="true"></i>${d.resource}</a></p>
+          </div>
+          <div class="ds" style="grid-column:1/-1">
+            <label>Why this matters for you</label>
+            <p>${d.tip}</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:1rem;padding-top:1rem;border-top:0.5px solid var(--color-border-tertiary)">
+          <div style="display:flex;align-items:center;gap:8px">
+            <i class="ti ti-flag" style="font-size:16px;color:${week.activeBorder}" aria-hidden="true"></i>
+            <span style="font-size:13px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Week ${week.num} milestone:</strong> ${week.milestone}</span>
+          </div>
+          <span class="time-badge"><i class="ti ti-clock" style="font-size:14px" aria-hidden="true"></i>${d.time} today</span>
+        </div>
+      </div>`;
+    }
+    html += `</div>`;
+
+    if (wi < weeks.length - 1) {
+      html += `<div style="height:0.5px;background:var(--color-border-tertiary);margin-top:1rem"></div>`;
+    }
+  });
+
+  html += `<div class="final-card">
+    <i class="ti ti-rocket final-icon" aria-hidden="true"></i>
+    <div class="final-text">
+      <h3>Day 30 outcome — junior web developer, ready to hire</h3>
+      <p>4 deployed projects · GitHub with real commit history · Resume-ready stack · Mock interview done · Stripe integration · Real-time features</p>
+      <div class="tags-row">
+        <span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">TypeScript</span><span class="skill-tag">JWT auth</span><span class="skill-tag">Socket.io</span>
+        <span class="skill-tag">React Query</span><span class="skill-tag">Testing</span><span class="skill-tag">Deployed ✓</span>
+      </div>
+    </div>
+  </div>`;
+
+  app.innerHTML = html;
+}
+
+window.select = function(wi, di) { activeWeek = wi; activeDay = di; render(); };
+window.toggleWeek = function(wi) { if(activeWeek!==wi){activeWeek=wi;activeDay=0;} render(); };
+render();
+</script>
