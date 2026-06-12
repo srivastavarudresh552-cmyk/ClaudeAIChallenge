@@ -1,0 +1,432 @@
+
+<h2 class="sr-only">Rudresh Srivastava — Complete Job Search & Personal Branding Toolkit with 12 sections including cover letter, emails, LinkedIn messages, interview prep and more</h2>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.tk{padding:1rem 0;max-width:680px}
+.header{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:16px}
+.avatar{width:52px;height:52px;border-radius:50%;background:#CECBF6;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:16px;color:#3C3489;flex-shrink:0}
+.header-info h1{font-size:18px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.header-info p{font-size:13px;color:var(--color-text-secondary)}
+.badge{display:inline-flex;align-items:center;gap:4px;background:#E1F5EE;color:#085041;font-size:11px;padding:3px 10px;border-radius:20px;margin-right:6px;margin-top:6px}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem}
+.nav-btn{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;color:var(--color-text-secondary);transition:all 0.15s}
+.nav-btn:hover,.nav-btn.active{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+.section{display:none}
+.section.active{display:block}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;margin-bottom:1rem}
+.section-title{font-size:16px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.section-sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:1.25rem}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:6px 14px;font-size:12px;cursor:pointer;color:var(--color-text-secondary);float:right;margin-top:-4px;transition:all 0.15s}
+.copy-btn:hover{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+.content{font-size:14px;line-height:1.8;color:var(--color-text-primary);white-space:pre-wrap}
+.label{font-size:11px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.tag{display:inline-flex;background:#EEEDFE;color:#3C3489;font-size:12px;padding:4px 12px;border-radius:20px;margin:3px}
+.tag.teal{background:#E1F5EE;color:#085041}
+.tag.amber{background:#FAEEDA;color:#633806}
+.tag.coral{background:#FAECE7;color:#712B13}
+.tag.red{background:#FCEBEB;color:#791F1F}
+.strength-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.strength-row:last-child{border-bottom:none}
+.strength-icon{width:32px;height:32px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.si-purple{background:#EEEDFE;color:#534AB7}
+.si-teal{background:#E1F5EE;color:#0F6E56}
+.si-amber{background:#FAEEDA;color:#854F0B}
+.si-blue{background:#E6F1FB;color:#185FA5}
+.si-coral{background:#FAECE7;color:#993C1D}
+.strength-text h4{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.strength-text p{font-size:12px;color:var(--color-text-secondary);line-height:1.6;margin-top:2px}
+.skill-col{flex:1;min-width:0}
+.skill-col h4{font-size:13px;font-weight:500;margin-bottom:10px;color:var(--color-text-primary)}
+.gap-row{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;margin-bottom:8px}
+.gap-row h4{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.gap-row p{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.road-step{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.road-step:last-child{border-bottom:none}
+.step-num{width:24px;height:24px;border-radius:50%;background:#CECBF6;color:#3C3489;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.road-step-text h4{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.road-step-text p{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.uvp-box{border-left:3px solid #7F77DD;padding-left:1rem;margin-bottom:1rem;border-radius:0}
+.uvp-box .label{margin-bottom:4px}
+.uvp-box p{font-size:14px;line-height:1.7;color:var(--color-text-primary)}
+.talking-pt{padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.talking-pt:last-child{border-bottom:none}
+.talking-pt h4{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.talking-pt p{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.title-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.title-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;border:0.5px solid var(--color-border-tertiary)}
+.title-card .rank{font-size:11px;color:var(--color-text-secondary);margin-bottom:2px}
+.title-card .job{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.title-card .fit{font-size:11px;color:#0F6E56;margin-top:3px}
+.copied{color:#0F6E56 !important}
+</style>
+
+<div class="tk">
+  <div class="header">
+    <div class="avatar">RS</div>
+    <div class="header-info">
+      <h1>Rudresh Srivastava</h1>
+      <p>Frontend Developer · UI/UX Designer · GenAI Builder · B.Tech CSE @ AKGEC (2024–28)</p>
+      <div>
+        <span class="badge"><i class="ti ti-building" aria-hidden="true"></i>Blockchain Research Lab</span>
+        <span class="badge"><i class="ti ti-star" aria-hidden="true"></i>CGPA 8.66</span>
+        <span class="badge"><i class="ti ti-device-laptop" aria-hidden="true"></i>Open to internships</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav" id="nav">
+    <button class="nav-btn active" onclick="show(0)">Cover Letter</button>
+    <button class="nav-btn" onclick="show(1)">Recruiter Email</button>
+    <button class="nav-btn" onclick="show(2)">Hiring Manager</button>
+    <button class="nav-btn" onclick="show(3)">LinkedIn Request</button>
+    <button class="nav-btn" onclick="show(4)">Referral Request</button>
+    <button class="nav-btn" onclick="show(5)">Follow-Up Email</button>
+    <button class="nav-btn" onclick="show(6)">30-sec Intro</button>
+    <button class="nav-btn" onclick="show(7)">Top 10 Job Titles</button>
+    <button class="nav-btn" onclick="show(8)">Key Strengths</button>
+    <button class="nav-btn" onclick="show(9)">Skill Gap Analysis</button>
+    <button class="nav-btn" onclick="show(10)">Personal Brand</button>
+    <button class="nav-btn" onclick="show(11)">Interview Prep</button>
+  </div>
+
+  <div id="s0" class="section active">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-file-text" aria-hidden="true"></i>ATS-friendly cover letter
+        <button class="copy-btn" onclick="copyText('cl')"><i class="ti ti-copy" aria-hidden="true"></i><span id="cl-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Customise [Company Name], [Role], and [Recruiter Name] before sending</div>
+      <div class="content" id="cl">[Your Name]
+srivastavarudresh552@gmail.com | +91-6392617385 | Ghaziabad, UP
+LinkedIn: linkedin.com/in/rudresh-srivastava-76062537b | Portfolio: my-portfolio-one-mocha-37.vercel.app
+
+[Date]
+
+[Recruiter Name]
+[Company Name]
+
+Dear [Recruiter Name],
+
+I am writing to apply for the [Role] position at [Company Name]. As a Computer Science undergraduate at Ajay Kumar Garg Engineering College (CGPA: 8.66/10) with active, production-level experience in frontend development and UI/UX design, I am confident I can deliver measurable value to your engineering team from day one.
+
+At the Blockchain Research Lab, I design and build responsive, accessible HTML/CSS/React components for real-world technical projects — translating Figma wireframes into clean, maintainable front-end code, debugging cross-browser interface issues, and collaborating with multi-disciplinary teams to meet project requirements. This isn't theoretical coursework; it's hands-on, deadline-driven work on production systems.
+
+My project portfolio reflects the same commitment to quality. My Spotify Clone — built with HTML5, CSS3, JavaScript, and Webpack — eliminated layout breakage across all standard screen sizes and achieved an estimated ~30% reduction in page load time through optimised Webpack chunking. The NASA API Explorer, a React SPA, demonstrates full API integration lifecycle using React Hooks (useState, useEffect) with robust error boundary handling. More recently, I built Zenith Banking, a full-stack platform with React, Node.js, Express.js, and MongoDB, featuring secure authentication, real-time transactions, and an admin dashboard — evidence that my capabilities extend meaningfully into full-stack territory.
+
+Beyond development, I approach interfaces as both an engineer and a designer. My Biotic Milk UX case study, grounded in qualitative and quantitative user research, demonstrates that I understand why interfaces succeed or fail — not just how to build them. This dual fluency in code and design is a relatively rare combination at the early-career level and consistently shortens the feedback loop between design and implementation.
+
+I am actively improving across Node.js, MongoDB, and backend fundamentals, and I bring strong competitive programming habits (LeetCode, CodeChef, Codeforces) that underpin everything I build.
+
+I would welcome the opportunity to discuss how my skills align with [Company Name]'s goals. Thank you for your time and consideration.
+
+Sincerely,
+Rudresh Srivastava</div>
+    </div>
+  </div>
+
+  <div id="s1" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-mail" aria-hidden="true"></i>Recruiter outreach email
+        <button class="copy-btn" onclick="copyText('re')"><i class="ti ti-copy" aria-hidden="true"></i><span id="re-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Use when reaching out to a technical recruiter on LinkedIn or email</div>
+      <div class="content" id="re">Subject: Frontend / Full-Stack Intern — Rudresh Srivastava (B.Tech CSE, AKGEC | CGPA 8.66 | React + Node.js)
+
+Hi [Recruiter Name],
+
+I'm Rudresh Srivastava, a second-year B.Tech CSE student at AKGEC (CGPA 8.66) currently working as a Frontend Developer and UI/UX Designer at the Blockchain Research Lab.
+
+I noticed [Company Name] is hiring for [Role], and I believe my profile is a strong match:
+
+• React.js + full-stack: Built and deployed Zenith Banking (React/Node/Express/MongoDB) and NASA API Explorer (React SPA with live API data) — both live on Vercel.
+• Performance focus: Achieved ~30% page load reduction via Webpack optimisation in a Spotify Clone project.
+• Design + code fluency: Translate Figma prototypes into accessible, cross-browser-compatible interfaces. Conducted UX research for a real-world case study (Biotic Milk).
+• Actively practising DSA on LeetCode and Codeforces.
+
+Portfolio: my-portfolio-one-mocha-37.vercel.app
+GitHub: github.com/srivastavarudresh552-cmyk
+
+I'd appreciate 15 minutes to discuss how I can contribute to your team. Happy to share my resume and projects at your convenience.
+
+Best regards,
+Rudresh Srivastava
++91-6392617385</div>
+    </div>
+  </div>
+
+  <div id="s2" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-user-circle" aria-hidden="true"></i>Hiring manager email
+        <button class="copy-btn" onclick="copyText('hm')"><i class="ti ti-copy" aria-hidden="true"></i><span id="hm-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Direct outreach to an engineering manager or CTO at a startup or mid-size company</div>
+      <div class="content" id="hm">Subject: Intern who ships — Frontend + Full-Stack (React/Node/MongoDB) | Live projects attached
+
+Hi [Manager Name],
+
+I'm a CSE undergrad (CGPA 8.66, AKGEC) currently designing and building interfaces at the Blockchain Research Lab. I came across [Company Name] and was impressed by [specific product/feature — add one line]. I'm reaching out directly because I think there's a strong fit.
+
+Here's what I bring to a small team:
+
+I write clean, documented React code and ship it. Zenith Banking (React + Node.js + Express + MongoDB) is live, has real auth, real transactions, and a working admin dashboard. NASA Explorer handles live API data with proper loading states and error handling. Spotify Clone reduced page load by ~30% through Webpack optimisation. All deployed on Vercel — no localhost demos.
+
+I also design. I built the Biotic Milk UX case study from scratch: user research, personas, task flows, wireframes, and high-fidelity prototypes. When I work on a frontend, I'm thinking about accessibility, mobile-first layout, and user trust — not just whether it compiles.
+
+I'm not looking for someone to teach me fundamentals. I'm looking for a real problem to solve alongside your team.
+
+Would you be open to a 20-minute call this week or next?
+
+Portfolio: my-portfolio-one-mocha-37.vercel.app
+
+Thanks for your time,
+Rudresh Srivastava
+srivastavarudresh552@gmail.com | +91-6392617385</div>
+    </div>
+  </div>
+
+  <div id="s3" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn connection request
+        <button class="copy-btn" onclick="copyText('li')"><i class="ti ti-copy" aria-hidden="true"></i><span id="li-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Under 300 characters — for recruiters, engineers, or hiring managers</div>
+      <div class="content" id="li">Hi [Name], I'm a frontend dev + UI/UX designer (React, Node.js, Figma) currently at Blockchain Research Lab. Exploring internship opportunities in web/full-stack dev. Would love to connect and learn from your experience at [Company].</div>
+    </div>
+    <div class="card">
+      <div class="section-title" style="font-size:13px;font-weight:400;color:var(--color-text-secondary)"><i class="ti ti-info-circle" aria-hidden="true"></i>Character count tip</div>
+      <p style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">The message above is ~220 characters. Swap in the actual [Name] and [Company] — it stays well under the 300-character LinkedIn limit.</p>
+    </div>
+  </div>
+
+  <div id="s4" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-users" aria-hidden="true"></i>Referral request message
+        <button class="copy-btn" onclick="copyText('rr')"><i class="ti ti-copy" aria-hidden="true"></i><span id="rr-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Send to a college senior, LinkedIn connection, or ex-colleague at a target company</div>
+      <div class="content" id="rr">Hi [Name],
+
+Hope you're doing well! I've been following your journey at [Company] — the work your team is doing on [product/area] looks genuinely interesting.
+
+I'm currently a second-year CSE student at AKGEC, working as a Frontend Developer and UI/UX Designer at the Blockchain Research Lab. I'm actively looking for internship opportunities in frontend or full-stack development, and [Company] is on my shortlist.
+
+I've built and deployed several live projects — a full-stack banking app (React + Node + MongoDB), a NASA API Explorer, and a Spotify Clone with Webpack performance optimisation. My portfolio is at my-portfolio-one-mocha-37.vercel.app if you'd like a quick look.
+
+If there's an open role that fits, I'd be genuinely grateful if you could refer me or let me know the right person to reach out to. I'll do all the legwork — I just want to make sure my application gets seen.
+
+No pressure at all if it's not a good time. Either way, I'd love to stay connected.
+
+Thanks so much,
+Rudresh Srivastava</div>
+    </div>
+  </div>
+
+  <div id="s5" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-clock" aria-hidden="true"></i>Follow-up email (day 5)
+        <button class="copy-btn" onclick="copyText('fu')"><i class="ti ti-copy" aria-hidden="true"></i><span id="fu-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Send exactly 5 business days after your original email with no response</div>
+      <div class="content" id="fu">Subject: Re: [Original Subject Line]
+
+Hi [Name],
+
+I wanted to follow up on my email from [date] regarding the [Role] opportunity at [Company Name].
+
+I understand your inbox is busy, so I'll keep this short. Since my last email, I pushed an update to Zenith Banking — the admin dashboard now includes real-time transaction filtering. I mention it only because it speaks to the consistency of my work: I'm building continuously, not just when there's a deadline.
+
+If the role is still open and my profile is a potential fit, I'd welcome a quick 15-minute call at your convenience. I'm flexible on timing.
+
+Attached is my resume for reference. Portfolio: my-portfolio-one-mocha-37.vercel.app
+
+Thanks again for your time.
+
+Rudresh Srivastava
+srivastavarudresh552@gmail.com | +91-6392617385</div>
+    </div>
+  </div>
+
+  <div id="s6" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-microphone" aria-hidden="true"></i>30-second professional introduction
+        <button class="copy-btn" onclick="copyText('pi')"><i class="ti ti-copy" aria-hidden="true"></i><span id="pi-label">Copy</span></button>
+      </div>
+      <div class="section-sub">Use at interviews, networking events, college fests, and hackathons</div>
+      <div class="content" id="pi">Hi, I'm Rudresh Srivastava — a second-year Computer Science student at AKGEC, Ghaziabad, with a CGPA of 8.66. I work at the intersection of frontend development and UI/UX design, which means I can take a product from a Figma wireframe all the way to a deployed, performant React application.
+
+Currently, I'm a Frontend Developer and Designer at the Blockchain Research Lab, where I build accessible, cross-browser interfaces for real technical projects. Outside of that, I've shipped three live full-stack and frontend apps — including Zenith Banking, a complete banking platform built with React, Node.js, and MongoDB.
+
+I'm actively looking for a software engineering internship where I can contribute to production-grade work. I'd love to hear more about what your team is building.</div>
+    </div>
+  </div>
+
+  <div id="s7" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-briefcase" aria-hidden="true"></i>Top 10 job titles suited to your profile</div>
+      <div class="section-sub">Ranked by profile fit — use exact titles when searching on LinkedIn, Internshala, Wellfound, or Naukri</div>
+      <div class="title-grid">
+        <div class="title-card"><div class="rank">#1 — Best fit</div><div class="job">Frontend Developer Intern</div><div class="fit">React · JavaScript · Responsive UI</div></div>
+        <div class="title-card"><div class="rank">#2 — Best fit</div><div class="job">UI/UX Designer Intern</div><div class="fit">Figma · Prototyping · UX Research</div></div>
+        <div class="title-card"><div class="rank">#3</div><div class="job">Full-Stack Developer Intern</div><div class="fit">React · Node.js · MongoDB</div></div>
+        <div class="title-card"><div class="rank">#4</div><div class="job">React Developer Intern</div><div class="fit">Component architecture · Hooks · SPA</div></div>
+        <div class="title-card"><div class="rank">#5</div><div class="job">Software Engineering Intern</div><div class="fit">Broadest scope — highest volume</div></div>
+        <div class="title-card"><div class="rank">#6</div><div class="job">Web Developer Intern</div><div class="fit">HTML · CSS · JS · REST APIs</div></div>
+        <div class="title-card"><div class="rank">#7</div><div class="job">Product Designer Intern</div><div class="fit">Figma · Wireframing · User research</div></div>
+        <div class="title-card"><div class="rank">#8</div><div class="job">Junior Frontend Engineer</div><div class="fit">For startups hiring early-career devs</div></div>
+        <div class="title-card"><div class="rank">#9</div><div class="job">GenAI Application Developer</div><div class="fit">Emerging role — aligns with portfolio tag</div></div>
+        <div class="title-card"><div class="rank">#10</div><div class="job">Technical Content / Dev Advocate Intern</div><div class="fit">Bridges code + communication skills</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="s8" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-eye" aria-hidden="true"></i>Key strengths recruiters will notice</div>
+      <div class="section-sub">Your most differentiating signals at the fresher / early-career level</div>
+      <div class="strength-row">
+        <div class="strength-icon si-purple"><i class="ti ti-rocket" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Live, deployed projects — not just GitHub repos</h4><p>Zenith Banking, NASA Explorer, and Spotify Clone are all live on Vercel with real functionality. Recruiters can click and test — this is rare at the fresher level and builds immediate credibility.</p></div>
+      </div>
+      <div class="strength-row">
+        <div class="strength-icon si-teal"><i class="ti ti-brush" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Dual fluency: code + design</h4><p>Very few entry-level candidates can write React code and produce high-fidelity Figma prototypes backed by UX research. This makes you useful in cross-functional teams immediately.</p></div>
+      </div>
+      <div class="strength-row">
+        <div class="strength-icon si-amber"><i class="ti ti-building-bank" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Real work experience at an active lab</h4><p>The Blockchain Research Lab role (Dec 2025–present) with progression from Trainee → Designer demonstrates you can contribute to a professional environment, not just solo projects.</p></div>
+      </div>
+      <div class="strength-row">
+        <div class="strength-icon si-blue"><i class="ti ti-chart-bar" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Quantified, performance-aware development</h4><p>~30% page load improvement via Webpack optimisation is a concrete, results-oriented data point — exactly what ATS and recruiters scan for in resumes.</p></div>
+      </div>
+      <div class="strength-row">
+        <div class="strength-icon si-coral"><i class="ti ti-code" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Full-stack capability with frontend depth</h4><p>Node.js + Express + MongoDB in Zenith Banking signals you can communicate with backend engineers and eventually own full features — a premium at early career.</p></div>
+      </div>
+      <div class="strength-row">
+        <div class="strength-icon si-purple"><i class="ti ti-trophy" style="font-size:16px" aria-hidden="true"></i></div>
+        <div class="strength-text"><h4>Consistently strong academic record</h4><p>CGPA 8.66 in B.Tech, 93% in Class XII, 95% in Class X signals discipline and intellectual consistency — valued especially at product and tech companies with rigorous hiring.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="s9" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-map" aria-hidden="true"></i>Skill gap analysis</div>
+      <div class="section-sub">Where you are strong, where the gaps are, and how to close them</div>
+      <div style="display:flex;gap:12px;margin-bottom:1rem;flex-wrap:wrap">
+        <div style="flex:1;min-width:220px">
+          <div class="label">Current strengths</div>
+          <span class="tag teal">React.js + Hooks</span>
+          <span class="tag teal">HTML5 / CSS3</span>
+          <span class="tag teal">JavaScript ES6+</span>
+          <span class="tag teal">REST API Integration</span>
+          <span class="tag teal">Node.js + Express</span>
+          <span class="tag teal">MongoDB basics</span>
+          <span class="tag teal">Webpack / npm</span>
+          <span class="tag teal">Figma + Prototyping</span>
+          <span class="tag teal">UX Research</span>
+          <span class="tag teal">Git / GitHub</span>
+          <span class="tag teal">Responsive Design</span>
+          <span class="tag teal">DSA practice</span>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <div class="label">Gaps to close (priority order)</div>
+          <span class="tag amber">TypeScript</span>
+          <span class="tag amber">Next.js / SSR</span>
+          <span class="tag amber">Testing (Jest / RTL)</span>
+          <span class="tag amber">CI/CD pipelines</span>
+          <span class="tag red">System design basics</span>
+          <span class="tag red">Auth (JWT / OAuth)</span>
+          <span class="tag red">Cloud basics (AWS/GCP)</span>
+          <span class="tag coral">GraphQL</span>
+          <span class="tag coral">Docker fundamentals</span>
+          <span class="tag coral">Tailwind CSS (deep)</span>
+        </div>
+      </div>
+      <div class="label" style="margin-bottom:8px">Recommended 6-month learning roadmap</div>
+      <div class="road-step"><div class="step-num">1</div><div class="road-step-text"><h4>Month 1–2: TypeScript + Next.js</h4><p>Rewrite NASA Explorer or a new project in TypeScript + Next.js. These are now table-stakes for React roles at product companies. Free: official Next.js docs + Matt Pocock's TypeScript tutorials.</p></div></div>
+      <div class="road-step"><div class="step-num">2</div><div class="road-step-text"><h4>Month 2–3: Testing with Jest + React Testing Library</h4><p>Write unit and integration tests for Zenith Banking components. Being able to say "I wrote tests for my projects" sets you apart from 90% of fresher applicants.</p></div></div>
+      <div class="road-step"><div class="step-num">3</div><div class="road-step-text"><h4>Month 3–4: Auth patterns + JWT / OAuth</h4><p>Add Google OAuth to an existing project. Zenith Banking already has auth — document and improve it. This directly supports full-stack internship roles.</p></div></div>
+      <div class="road-step"><div class="step-num">4</div><div class="road-step-text"><h4>Month 4–5: CI/CD + GitHub Actions</h4><p>Set up a GitHub Actions pipeline for one of your Vercel projects. Automate linting, testing, and deploy. Takes ~2 days and dramatically improves your engineering story.</p></div></div>
+      <div class="road-step"><div class="step-num">5</div><div class="road-step-text"><h4>Month 5–6: System design fundamentals + 1 certification</h4><p>Study Grokking System Design basics. Add one formal cert: Meta Front-End Developer Certificate (Coursera) or freeCodeCamp Responsive Web Design — both are free/low-cost and ATS-recognised.</p></div></div>
+    </div>
+  </div>
+
+  <div id="s10" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-id" aria-hidden="true"></i>Personal brand summary</div>
+      <div class="section-sub">Your positioning, headline, and value proposition — ready to paste anywhere</div>
+      <div class="uvp-box">
+        <div class="label">Unique value proposition</div>
+        <p>You are one of a small group of early-career developers who can own a feature end-to-end — from Figma prototype to deployed React component to Node.js API — without needing a handoff. That rare combination of design thinking and full-stack execution is your competitive edge.</p>
+      </div>
+      <div class="uvp-box" style="border-color:#1D9E75">
+        <div class="label">Professional positioning statement</div>
+        <p>A CSE undergrad and active frontend developer who builds production-ready web applications with React, Node.js, and MongoDB, and designs the interfaces they run on — bridging the gap between engineering and UX at a stage when most candidates can only do one.</p>
+      </div>
+      <div class="uvp-box" style="border-color:#D85A30">
+        <div class="label">LinkedIn / resume headline (choose one)</div>
+        <p style="margin-bottom:8px"><strong style="font-weight:500">Option A (technical focus):</strong> Frontend Developer & UI/UX Designer · React · Node.js · Figma · BRL | AKGEC B.Tech CSE 2028</p>
+        <p><strong style="font-weight:500">Option B (outcome focus):</strong> Building production-grade web apps from Figma to deployment · React · Full-Stack · Open to internships</p>
+      </div>
+      <div style="margin-top:1rem">
+        <div class="label">Keywords to use everywhere (ATS + LinkedIn SEO)</div>
+        <span class="tag">Frontend Developer</span>
+        <span class="tag">React Developer</span>
+        <span class="tag">UI/UX Designer</span>
+        <span class="tag">Full Stack Developer</span>
+        <span class="tag">JavaScript Developer</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Responsive Web Design</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">React Hooks</span>
+        <span class="tag">Component Architecture</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="s11" class="section">
+    <div class="card">
+      <div class="section-title"><i class="ti ti-message-circle" aria-hidden="true"></i>Interview talking points</div>
+      <div class="section-sub">Your best stories, your strongest signals, and the questions you should prepare for</div>
+      <div class="label" style="margin-bottom:8px">Most impressive achievements to lead with</div>
+      <div class="talking-pt">
+        <h4><span style="background:#EEEDFE;color:#3C3489;font-size:11px;padding:2px 8px;border-radius:20px">Achievement 1</span> Zenith Banking — full-stack, live in production</h4>
+        <p>Don't just say you "built a banking app." Say: "I architected and deployed a full-stack banking platform with secure JWT authentication, real-time transaction processing, and a role-based admin dashboard — live on Vercel. I used React on the frontend, Node.js + Express for the API, and MongoDB for data persistence." Then open the URL in front of them.</p>
+      </div>
+      <div class="talking-pt">
+        <h4><span style="background:#E1F5EE;color:#085041;font-size:11px;padding:2px 8px;border-radius:20px">Achievement 2</span> Webpack optimisation → ~30% load time reduction</h4>
+        <p>This is your only hard performance metric. Frame it as: "I configured Webpack for code splitting and optimised asset chunking in my Spotify Clone, which reduced estimated page load time by around 30%. That experience made me think proactively about performance in every project since." It shows you measure outcomes, not just output.</p>
+      </div>
+      <div class="talking-pt">
+        <h4><span style="background:#FAEEDA;color:#633806;font-size:11px;padding:2px 8px;border-radius:20px">Achievement 3</span> BRL promotion: Trainee → Designer</h4>
+        <p>Frame the progression: "I joined Blockchain Research Lab as a Trainee in September 2025. Within three months I was promoted to Designer based on my contributions to interface design and technical documentation. I've been in that role since December 2025, building responsive components for real research projects." This signals reliability and growth trajectory.</p>
+      </div>
+      <div class="label" style="margin:1rem 0 8px">Questions to prepare thoroughly</div>
+      <div class="talking-pt"><h4><i class="ti ti-help" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> "Tell me about yourself."</h4><p>Use your 30-second intro (Section 7) as the base. Expand with 1–2 project highlights and end with what you're looking for. Practice until it takes exactly 90 seconds.</p></div>
+      <div class="talking-pt"><h4><i class="ti ti-help" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> "Why do you want to work here?"</h4><p>Research the company's product, tech stack, and a recent blog post or launch before every interview. Mention one specific, concrete thing — never give a generic answer to this.</p></div>
+      <div class="talking-pt"><h4><i class="ti ti-help" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> "What's your biggest weakness?"</h4><p>Be honest and show active learning: "I'm still building my backend depth — particularly around system design and cloud infrastructure. I've started studying Next.js and I'm working through system design fundamentals in parallel with my coursework."</p></div>
+      <div class="talking-pt"><h4><i class="ti ti-help" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> "Walk me through a technical challenge."</h4><p>Use Zenith Banking's auth flow or the Webpack optimisation story. Structure as: the problem → your approach → what you tried that didn't work → the solution → what you'd do differently. Interviewers love the "what didn't work" part.</p></div>
+      <div class="talking-pt"><h4><i class="ti ti-help" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> DSA / coding rounds</h4><p>You're active on LeetCode, CodeChef, and Codeforces. For internship-level roles, focus on Arrays, Strings, Hashmaps, Two Pointers, and Recursion. Aim for 150+ LeetCode problems before major application cycles.</p></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(i){
+  document.querySelectorAll('.section').forEach((s,idx)=>s.classList.toggle('active',idx===i));
+  document.querySelectorAll('.nav-btn').forEach((b,idx)=>b.classList.toggle('active',idx===i));
+}
+function copyText(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  navigator.clipboard.writeText(el.innerText).then(()=>{
+    const lbl=document.getElementById(id+'-label');
+    if(lbl){lbl.textContent='Copied!';lbl.parentElement.classList.add('copied');setTimeout(()=>{lbl.textContent='Copy';lbl.parentElement.classList.remove('copied')},2000);}
+  });
+}
+</script>
