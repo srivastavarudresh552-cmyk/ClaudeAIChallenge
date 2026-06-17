@@ -4,10 +4,6 @@ A single-file HTML dashboard that analyses fuel economics for a personal vehicle
 
 The centerpiece is the **E85 Paradox**: E85 burns cleaner and needs less maintenance, but at current Indian pump prices it is *not* cheaper per km than petrol — this dashboard quantifies exactly how much pricing would need to shift to change that.
 
-![Status](https://img.shields.io/badge/status-complete-2dd4a7) ![Type](https://img.shields.io/badge/type-single--file%20HTML-f5a623) ![Charts](https://img.shields.io/badge/charts-pure%20SVG-3b82f6)
-
----
-
 ## 🔍 What it does
 
 Given a raw CSV of vehicle trips grouped by `Fuel_Type`, the dashboard computes and visualises:
