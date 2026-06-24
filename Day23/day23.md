@@ -156,19 +156,6 @@ python simulate/route_optimizer.py --city hyderabad --depots 2 --deliveries 50
 
 ---
 
-
----
-
-## 📄 Documentation
-
-- [Customer & MVP Blueprint](docs/validation/DroneDeliver_Customer_MVP_Blueprint.pdf)
-- [Pilot SLA Framework](docs/pilot-sla-template.md) *(coming soon)*
-- [DGCA Compliance Checklist](docs/compliance/dgca-checklist.md) *(coming soon)*
-- [API Reference](docs/api-reference.md) *(coming soon)*
-
----
----
-
 ## 📬 Contact & Resources
 
 | Resource | Link |
