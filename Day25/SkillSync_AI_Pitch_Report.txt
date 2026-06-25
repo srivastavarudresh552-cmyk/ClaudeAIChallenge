@@ -1,0 +1,59 @@
+SHARK TANK SIMULATOR — PITCH REPORT
+Generated: 25/6/2026, 2:53:11 pm
+========================================================
+
+STARTUP: SkillSync AI
+FUNDING ASK: $500,000 for 10% equity  Valuation  Pre-Money = $4.5M  Post-Money = $5M
+
+PITCH OVERVIEW
+──────────────
+Problem:        Millions of college students and job seekers struggle to identify the skills required for their dream jobs. Existing learning platforms provide courses but fail to create personalized learning roadmaps aligned with real-time industry requirements, resulting in low employability and high hiring costs for companies.
+Solution:       SkillSync AI is an AI-powered career acceleration platform that analyzes a user's resume, target job role, and current skill set to generate a personalized learning roadmap.
+
+The platform:
+
+Identifies skill gaps
+Recommends courses and projects
+Creates interview preparation plans
+Tracks progress
+Matches users with relevant job opportunities
+
+Unlike traditional learning platforms, SkillSync AI focuses on outcomes—helping users become job-ready faster.
+Revenue Model:  SaaS Subscription
+Target Audience:College students Fresh graduates Career switchers SMB recruiters EdTech institutions
+Traction:       12,000 registered users 2,500 monthly active users 500 paid subscribers $4,000 MRR Partnerships with 8 colleges 92% user satisfaction score
+
+SCORECARD
+─────────
+Market Potential:      62 / 100
+Innovation:            58 / 100
+Business Model:        55 / 100
+Execution:             60 / 100
+Investment Worthiness: 57 / 100
+─────────────────────────────
+TOTAL SCORE:           58 / 100
+
+FINAL DECISION: COME BACK LATER
+Suggested Valuation: $29M
+Funding Amount: $500,000 for 10% equity  Valuation  Pre-Money = $4.5M  Post-Money = $5M
+
+PANEL REASONING
+───────────────
+The panel carefully reviewed the pitch and found both strengths and areas of concern. The business model needs more validation before a full commitment.
+
+INDIVIDUAL VERDICTS
+───────────────────
+Victoria Chen: REJECT
+  "Interesting concept with execution risks."
+
+Marcus Reid: REJECT
+  "Interesting concept with execution risks."
+
+Priya Sharma: REJECT
+  "Interesting concept with execution risks."
+
+David Okafor: REJECT
+  "Interesting concept with execution risks."
+
+─────────────────────────────
+Powered by AI Shark Tank Simulator
