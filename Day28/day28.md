@@ -16,7 +16,12 @@ AdmissionSim Pro puts the user in the role of a Hospital Admission Coordinator, 
 
 <!-- Replace the URL below with your actual screenshot path once uploaded to your repo -->
 
-![Admission Readiness Simulator – Setup Phase](https://raw.githubusercontent.com/your-username/your-repo/main/assets/screenshot-setup.png)
+![Admission Readiness Simulator – Setup Phase](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day28/Screenshot%202026-06-29%20131315.png)
+![Admission Readiness Simulator – Setup Phase]()
+![Admission Readiness Simulator – Setup Phase](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day28/Screenshot%202026-06-29%20131315.png)
+![Admission Readiness Simulator – Setup Phase](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day28/Screenshot%202026-06-29%20131315.png)
+![Admission Readiness Simulator – Setup Phase](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day28/Screenshot%202026-06-29%20131315.png)
+![Admission Readiness Simulator – Setup Phase](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day28/Screenshot%202026-06-29%20131315.png)
 
 ![Admission Readiness Simulator – Analysis & Score](https://raw.githubusercontent.com/your-username/your-repo/main/assets/screenshot-analysis.png)
 ---
