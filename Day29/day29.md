@@ -76,13 +76,12 @@ Built as a self-contained, single-file web app (HTML/CSS/JS) with no external de
 
 | | |
 |---|---|
-| **Landing Page**<br>![Landing Page]()![Uploading 01-landing-page.png…]()
-) | **Phase 1 — Your Company**<br>![Your Company](screenshots/02-your-company.png) |
-| **Phase 2 — Crisis Detected**<br>![Crisis Detected](screenshots/03-crisis-detected.png) | **Phase 3 — Choose Your Actions**<br>![Choose Your Actions](screenshots/04-choose-actions.png) |
-| **Phase 3 — Updated Metrics**<br>![Updated Metrics](screenshots/05-updated-metrics.png) | **Phase 4 — Boardroom Negotiation**<br>![Boardroom Negotiation](screenshots/06-boardroom-negotiation.png) |
-| **Phase 4 — Negotiation Complete**<br>![Negotiation Complete](screenshots/07-negotiation-complete.png) | **Phase 5 — Executive Decision-Making**<br>![Executive Decision-Making](screenshots/08-executive-decision.png) |
-| **Phase 5 — Leadership Score**<br>![Leadership Score](screenshots/09-leadership-score.png) | **Phase 6 — AI Strategy Investment**<br>![AI Investment](screenshots/10-ai-investment.png) |
-| **Phase 7 — Final Crisis Performance Report**<br>![Final Report](screenshots/11-final-report.png) | |
+| **Landing Page**<br>![Landing Page](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181100.png) | **Phase 1 — Your Company**<br>![Your Company](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181204.png) |
+| **Phase 2 — Crisis Detected**<br>![Crisis Detected](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181309.png) | **Phase 3 — Choose Your Actions**<br>![Choose Your Actions](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181417.png) |
+| **Phase 3 — Updated Metrics**<br>![Updated Metrics](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181455.png) | **Phase 4 — Boardroom Negotiation**<br>![Boardroom Negotiation](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181612.png) |
+| **Phase 4 — Negotiation Complete**<br>![Negotiation Complete](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181612.png) | **Phase 5 — Executive Decision-Making**<br>![Executive Decision-Making](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181623.png) |
+| **Phase 5 — Leadership Score**<br>![Leadership Score](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181658.png) | **Phase 6 — AI Strategy Investment**<br>![AI Investment](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181716.png) |
+| **Phase 7 — Final Crisis Performance Report**<br>![Final Report](https://github.com/srivastavarudresh552-cmyk/ClaudeAIChallenge/blob/main/Day29/Screenshot%202026-06-29%20181733.png) | |
 
 ---
 
