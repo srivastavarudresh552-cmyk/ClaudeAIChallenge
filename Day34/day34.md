@@ -29,34 +29,34 @@ The goal was to make *curiosity* the mechanic, not the decoration:
 
 ## 📸 Screenshots
 
-All screenshots live in the `screenshots/` folder next to this README — keep that folder alongside `marketing_detective.html` when you push to GitHub and the images below will render automatically.
+Images are hosted directly from the [Marketing-Detective repo](https://github.com/srivastavarudresh552-cmyk/Marketing-Detective/tree/main/screenshots), so they render below regardless of where this README lives.
 
 **Title Screen**
-![Title Screen](screenshots/title-screen.png)
+![Title Screen](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/title-screen.png)
 
 **Case Assignment**
-![Case Assignment](screenshots/case-assignment.png)
+![Case Assignment](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/case-assignment.png)
 
 **Investigation Board — Case File**
-![Case File](screenshots/case-file.png)
+![Case File](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/case-file.png)
 
 **Investigation Board — Performance**
-![Performance](screenshots/performance.png)
+![Performance](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/performance.png)
 
 **Investigation Board — Witnesses**
-![Witnesses](screenshots/witnesses.png)
+![Witnesses](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/witnesses.png)
 
 **Evidence Locker**
-![Evidence Locker](screenshots/evidence-locker.png)
+![Evidence Locker](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/evidence-locker.png)
 
 **Suspect Lineup**
-![Suspect Lineup](screenshots/suspect-lineup.png)
+![Suspect Lineup](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/suspect-lineup.png)
 
 **Case Closed**
-![Case Closed](screenshots/case-closed.png)
+![Case Closed](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/case-closed.png)
 
 **Learning Report**
-![Learning Report](screenshots/learning-report.png)
+![Learning Report](https://raw.githubusercontent.com/srivastavarudresh552-cmyk/Marketing-Detective/main/screenshots/learning-report.png)
 
 ## 🧩 Case content
 
@@ -87,6 +87,7 @@ All companies, people, and data are fictional and created for this project.
 3. That's it — an internet connection is only used to fetch the React/Babel CDN scripts on first load
 
 No installation, no server, no configuration.
+
 
 
 ## 🎨 Design
